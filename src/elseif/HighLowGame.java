@@ -14,6 +14,7 @@ public class HighLowGame {
 		int random = new Random().nextInt(100-1) + 1;
 		
 		// 2. Print out the random variable above
+		String win = ("lost");
 		System.out.println(random);
 		// 11. Repeat steps 1 to 10 ten times
 		for (int i = 0; i < 10; i++) {
@@ -25,6 +26,7 @@ public class HighLowGame {
 			int answernumber = Integer.parseInt(answer);
 			// 5. if the guess is correct
 			if (answernumber == random) {
+			 win = ("won"); 
 			JOptionPane.showMessageDialog(null, "You win!");	
 			}
 				// 6. Win
@@ -42,9 +44,10 @@ public class HighLowGame {
                 }
 		}
 		// 13. Tell them they lose
-		JOptionPane.showConfirmDialog(null, "You lose )-:");
+		if (win.equals("lost")) {
+		JOptionPane.showMessageDialog(null, "You lose )-:");
 	}
 
 }
 
-
+}
